@@ -18,8 +18,6 @@ export const request = async (query: string) => {
    }
 };
 
-export const sortByDate = (array: TourListType) => [...array].sort((a, b) => +new Date(a.date) - +new Date(b.date));
-
 export const dateParseYMD = (date: Date) => (
    date.toLocaleString("ru", {
       year: 'numeric',
