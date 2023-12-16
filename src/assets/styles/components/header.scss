@@ -1,0 +1,38 @@
+@use '../variables' as *;
+
+.header {
+   padding: 20px 0;
+
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .icon:hover{
+      fill: $orange;
+   }
+}
+
+.menu {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+   }
+
+   &__item-link {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all .25s;
+
+      &:hover {
+         color: $orange;
+      }
+
+      &.active {
+         color: $orange;
+      }
+   }
+}
+

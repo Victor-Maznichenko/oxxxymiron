@@ -1,0 +1,99 @@
+@use '../variables' as *;
+
+.tracks {
+   padding: 24px 0 70px;
+   text-transform: uppercase;
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__more {
+      display: block;
+      text-align: center;
+   }
+   &__list-item + &__list-item{
+      margin-top: -30px;
+   }
+}
+
+.track {
+   display: flex;
+   align-items: flex-start;
+
+   &:nth-child(2n) {
+      flex-direction: row-reverse;
+      text-align: right;
+   }
+
+   &__preview {
+      max-width: 300px;
+   }
+
+   &__audio {
+      width: 100%;
+      height: 300px;
+      border: none;
+      background-color: transparent;
+      position: relative;
+      user-select: none;
+      margin-bottom: 24px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         transition: all .3s;
+         height: 100%;
+         background-color: rgba($black, 0.5);
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+
+      .icon-play,
+      .icon-pause {
+         position: absolute;
+         z-index: 1;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: all .3s;
+         width: 40%;
+         height: 40%;
+         fill: $orange;
+      }
+
+      .icon-pause {
+         opacity: 0;
+      }
+   }
+
+   &.active &__audio {
+      .icon-pause {
+         opacity: 1;
+      }
+
+      .icon-play {
+         opacity: 0;
+      }
+
+      &::before {
+         background-color: rgba($black, 0);
+      }
+
+   }
+
+   &__title {
+      font-weight: 400;
+      line-height: 100%;
+   }
+
+   &__date {
+      color: rgba($light, 0.5);
+   }
+}

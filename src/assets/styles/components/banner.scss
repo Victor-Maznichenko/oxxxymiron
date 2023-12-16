@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+.banner__inner {
+   position: relative;
+   display: flex;
+   align-items: top;
+   justify-content: center;
+   background-image: url('../../../assets/media/images/main-bg.webp');
+   background-repeat: no-repeat;
+   background-position: center top;
+   background-size: contain;
+}
+
+.banner__info {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 0;
+}
+
+.banner__video{
+   width: 60%;
+}

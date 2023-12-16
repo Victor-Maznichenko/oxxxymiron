@@ -1,0 +1,45 @@
+@use '../variables' as *;
+
+.onlyfans {
+   display: flex;
+   max-width: 190px;
+   width: 100%;
+   flex-direction: column;
+   text-transform: uppercase;
+   font-size: 8px;
+
+   &__name {
+      color: rgba($light, 0.5);
+      margin-bottom: 7px;
+   }
+
+   &__email,
+   &__btn {
+      border: none;
+      padding: 7px 18px;
+      outline: none;
+   }
+
+   &__email {
+      background-color: $darkGray;
+      margin-bottom: 10px;
+      color: $light;
+      font-size: inherit;
+
+      &::placeholder {
+         font-weight: 600;
+         text-transform: uppercase;
+         font-size: inherit;
+         color: rgba($light, 0.5);
+      }
+   }
+
+   &__btn {
+      font-size: inherit;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 11px 9px 18px;
+   }
+}

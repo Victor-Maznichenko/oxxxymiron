@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+.social {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   &__item-link {
+      .icon {
+         fill: $light;
+         transition: all .25s;
+      }
+   }
+}
